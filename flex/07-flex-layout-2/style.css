@@ -32,25 +32,36 @@ body {
   width: 300px;
   background: royalblue;
   box-sizing: border-box;
+  flex-shrink: 0;
 }
 
 ul {
-  width: 300px;
-  padding: 0px;
+  margin: 0;
+  padding: 0;
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
+  list-style-type: none;
 }
 
 li {
+  margin: 0 5px;
+  padding: 10px;
+}
+
+li > a {
   font-size: 24px;
   text-decoration: none;
-  list-style-type: none;
+  color: white;
 }
 
 .card {
   border: 1px solid #eee;
   box-shadow: 2px 4px 16px rgba(0, 0, 0, 0.06);
   border-radius: 4px;
+  width: 300px;
+  padding: 16px;
+  margin: 10px;
 }
 
 .container1 {
@@ -59,4 +70,6 @@ li {
 }
 .container2 {
   display: flex;
+  flex-wrap: wrap;
+  padding: 32px;
 }

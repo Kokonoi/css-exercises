@@ -2,9 +2,15 @@
   margin: 0;
   padding: 0;
 }
-
+ul {
+  list-style-type: none;
+}
 .container {
   text-align: center;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 20% 1fr;
+  grid-template-rows: 10% 5% 4fr 5%;
 }
 
 .container div {
@@ -17,15 +23,36 @@
 
 .header {
   background-color: #393f4d;
+  grid-area: 1/1/2/3;
+  display: grid;
+  grid-template-columns: 3fr repeat(4, 1fr);
 }
 
+.logo {
+  grid-area: 1/1/2/2;
+  text-align: left;
+}
+.menu {
+  grid-area: 1/2/2/6;
+}
 .menu ul,
 .menu li {
   font-size: 16px;
 }
 
+.menu ul {
+  display: flex;
+  height: 100%;
+  align-items: center;
+}
+
+.menu li {
+  flex: 1;
+}
+
 .sidebar {
-  background-color: #FF7755;
+  background-color: #ff7755;
+  grid-area: 2/1/4/2;
 }
 
 .sidebar .photo {
@@ -36,7 +63,6 @@
   border-radius: 10px;
 }
 
-
 .sidebar .side-content {
   background-color: white;
   color: black;
@@ -45,7 +71,8 @@
 }
 
 .nav {
-  background-color: #FF7755;
+  background-color: #ff7755;
+  grid-area: 2/2/3/3;
 }
 
 .nav ul li {
@@ -55,6 +82,7 @@
 
 .article {
   background-color: #bccbde;
+  grid-area: 3/2/4/3;
 }
 
 .article p {
@@ -65,7 +93,7 @@
 }
 
 .article .card {
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   color: black;
   text-align: center;
 }
@@ -83,9 +111,10 @@
 
 .footer {
   background-color: #393f4d;
+  grid-area: 4/1/5/3;
 }
 
 .footer p {
   font-size: 13px;
-  font-weight: normal;  
+  font-weight: normal;
 }

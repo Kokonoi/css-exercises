@@ -9,8 +9,9 @@ ul {
   text-align: center;
   height: 100%;
   display: grid;
-  grid-template-columns: 20% 1fr;
+  grid-template-columns: minmax(250px, 20%) 1fr;
   grid-template-rows: 10% 5% 4fr 5%;
+  gap: 5px;
 }
 
 .container div {
@@ -31,6 +32,7 @@ ul {
 .logo {
   grid-area: 1/1/2/2;
   text-align: left;
+  margin: auto;
 }
 .menu {
   grid-area: 1/2/2/6;
@@ -53,6 +55,9 @@ ul {
 .sidebar {
   background-color: #ff7755;
   grid-area: 2/1/4/2;
+  display: grid;
+  gap: 50px;
+  grid-column: 1fr;
 }
 
 .sidebar .photo {
@@ -61,6 +66,9 @@ ul {
   font-size: 12px;
   font-weight: normal;
   border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .sidebar .side-content {
@@ -68,6 +76,9 @@ ul {
   color: black;
   font-size: 16px;
   font-weight: normal;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .nav {
@@ -75,9 +86,13 @@ ul {
   grid-area: 2/2/3/3;
 }
 
-.nav ul li {
+.nav ul {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
   font-size: 16px;
   text-transform: uppercase;
+  height: 100%;
+  align-items: center;
 }
 
 .article {
